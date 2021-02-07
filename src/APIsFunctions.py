@@ -15,16 +15,15 @@ from pymongo import MongoClient
 token1= os.getenv("token1")
 token2 = os.getenv("token2")
 
-coordinates = {'madrid': [-3.6793, 40.42955],
- 'bilbao': [-2.9253, 43.2627],
- 'gijon': [-5.7258, 43.5317],
- 'toledo': [-4.02711, 39.94034]}
-
-
 def get_coordinates(lista):
 
     '''
-    EXPLICAR LO QUE HACE
+    Receives a list of localities and returns a dictionary with the coordinates of the localities. 
+    Args:
+        List: with the name as string of the target localities. 
+
+    Return:
+        Dicctionary:  with localities and catographic infomation
     '''
     d = {}
     try: 
@@ -40,21 +39,29 @@ def get_coordinates(lista):
 def extract_coordinates(dictionary):
 
     '''
-    EXPLICAR LO QUE HACE
+     Receives a dictionary of localities and returns a dictionary with the coordinates of the localities.
     '''
 
     dict_empty = {}
-    for k, v in c.items():
+    for k, v in dictionary.items():
         coor = [float(v["longt"]),float(v["latt"])]
         dict_empty[k] = coor
     return dict_empty
 
 
-def get_data (latitude, longitude, *args):
+def get_data (latitude, longitude, url_query, *args):
     '''
-    descripcion de lo que hace la función aquí
+    Makes the call to the foursquare API to extract the information from the queries we determine.
+    Args:
+        latitude and longitude (float): the lat and long of the location
+        url_query (string): the url of foursquare API
+        *args (list): list of the target Venue Category of foursquare
+    Return: 
+        data (dictionary): a dicctionary with all the information of the Venues per location
     '''  
     d = {}
+    token1= os.getenv("token1")
+    token2 = os.getenv("token2")
     
     for i in args: 
         parametros = {"client_id" : token1,
@@ -71,6 +78,16 @@ def get_data (latitude, longitude, *args):
     return d
 
 def clean_data(result):
+    '''
+    It receives a dictionary containing all the information of the API call for each element of the querie and returns a list of dictionaries
+    where each one of them is the data of a querie. 
+    Args:
+        result (list of diccionaries): contain all the infomation of a querie per location
+    Return:
+        A list of dictionaries. 
+    '''
+
+
     for key, values in result.items():
         
         if key == "Preschool":
@@ -85,12 +102,6 @@ def clean_data(result):
             decoded = response.get('groups')[0]
             final_vegan = decoded.get('items')
             
-        elif key == "Bar":
-            bar = result.get(key)
-            response = bar.get('response')
-            decoded = response.get('groups')[0]
-            final_bar = decoded.get('items')
-
             
         elif key == "Park":
             park = result.get(key)
@@ -98,7 +109,7 @@ def clean_data(result):
             decoded = response.get('groups')[0]
             final_park = decoded.get('items')
             
-        elif key == "Athletics & Sports":
+        elif key == "Basketball Court":
             sports = result.get(key)
             response = sports.get('response')
             decoded = response.get('groups')[0]
@@ -110,4 +121,32 @@ def clean_data(result):
             decoded = response.get('groups')[0]
             final_train = decoded.get('items')
             
-    return final_school, final_vegan, final_bar, final_park, final_sport, final_train
+    results = [final_school, final_vegan,  final_park, final_sport, final_train]
+            
+    return results
+
+def getFromDict(diccionario,mapa):
+    return reduce (operator.getitem,mapa,diccionario)
+
+def create_dataframe (*args):
+    '''
+    
+    '''
+    mapa_nombre = ["venue","name"]
+    m_latitud = ["venue","location","lat"]
+    m_longitud = ["venue","location","lng"]
+    m_category = ["venue", "categories"]
+    
+    results = []
+
+    for i in args:
+        for dic in i:            
+            paralista = {}
+            paralista["name"] = getFromDict(dic,mapa_nombre)
+            paralista["latitud"] = getFromDict(dic,m_latitud)
+            paralista["longitud"] = getFromDict(dic,m_longitud)
+            paralista["category"] = getFromDict(dic,m_category)
+            results.append(paralista)
+    df = pd.DataFrame(results)
+
+    return df
