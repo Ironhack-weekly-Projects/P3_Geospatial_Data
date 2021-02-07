@@ -21,7 +21,6 @@ Based on all the information given by the employees, the first filters I applied
  4. Created since 2007 to be surrounded by young companies. 
 
 # Working plan
-
 ![workingplan](https://github.com/AnaAGG/P3_Geospatial_Data/blob/main/Images/Presentaci%C3%B3n1.jpg?raw=true)
 
 The following resources have been used to achieve the objective of this project: 
