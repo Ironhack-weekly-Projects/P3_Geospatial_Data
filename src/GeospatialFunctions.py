@@ -29,6 +29,11 @@ def create_geoloc(path_csv):
     return gdf
 
 def connection (gdf, nombre):
+    '''
+    I HAVE CREATED THIS FUNCTION BUT I HAVE NOT BEEN ABLE TO USE IT, IT GAVE ME ERROR ALL THE TIME. 
+    The objective is to create the connections with MongoCompass for each of the dataframes that we 
+    have with the information downloaded from the foursquare API.
+    '''
     client = MongoClient()
     db = client.geo
     collection = db.create_collection(name = f"{nombre}")
@@ -38,10 +43,20 @@ def connection (gdf, nombre):
     data = gdf.to_dict(orient='records')
     collection.insert_many(data)
     
-    return "Collection created successfully"
+    return "Success"
 
 
 def queries_close (collection, lon, lat):
+    '''
+    Create an aggregation in pymongo using the $geonear method to calculate the distance between 
+    each of the points in my data set and the origin coordinates.
+
+    Args:
+        Mongo collection (str)
+        lat and long (float) for the reference location 
+    Return:
+        json file which include the latitude, longitude, name, id and distance for each object in the collection 
+    '''
     query = [{
     "$geoNear": {'near': [lon, lat],
                  'distanceField': 'distance',

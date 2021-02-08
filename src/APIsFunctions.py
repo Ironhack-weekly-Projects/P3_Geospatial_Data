@@ -18,12 +18,12 @@ token2 = os.getenv("token2")
 def get_coordinates(lista):
 
     '''
-    Receives a list of localities and returns a dictionary with the coordinates of the localities. 
+    Receives a list of localities and returns a dictionary with the coordinates and altitude information of the localities. 
     Args:
         List: with the name as string of the target localities. 
 
     Return:
-        Dicctionary:  with localities and catographic infomation
+        Dicctionary:  with localities and cartographic infomation (altitude, elevation, longitude, latitude)
     '''
     d = {}
     try: 
@@ -39,7 +39,11 @@ def get_coordinates(lista):
 def extract_coordinates(dictionary):
 
     '''
-     Receives a dictionary of localities and returns a dictionary with the coordinates of the localities.
+     Receives a dictionary of localities 
+     Args:
+        Dictionary: with cartogrphic information
+     Returns:
+        Dictionary: key = the studies locations, values: latitude and longitude.
     '''
 
     dict_empty = {}
@@ -130,7 +134,14 @@ def getFromDict(diccionario,mapa):
 
 def create_dataframe (*args):
     '''
-    
+    Converts a list of dictionaries with all the information from API calls into a dataframe with the 
+    information we want (longitude, latitude, business name and category).
+
+    Args:
+        list of dicctionaries with the API information per location
+
+    Return:
+        Dataframe: with ordenated infomation
     '''
     mapa_nombre = ["venue","name"]
     m_latitud = ["venue","location","lat"]
@@ -150,3 +161,4 @@ def create_dataframe (*args):
     df = pd.DataFrame(results)
 
     return df
+
