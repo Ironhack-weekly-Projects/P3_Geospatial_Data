@@ -28,6 +28,18 @@ def create_geoloc(path_csv):
    
     return gdf
 
+def connection (gdf, nombre):
+    client = MongoClient()
+    db = client.geo
+    collection = db.create_collection(name = f"{nombre}")
+    collection = db[f"{nombre}"]
+    collection.create_index([("loc", "2dsphere")])
+    
+    data = gdf.to_dict(orient='records')
+    collection.insert_many(data)
+    
+    return "Collection created successfully"
+
 
 def queries_close (collection, lon, lat):
     query = [{

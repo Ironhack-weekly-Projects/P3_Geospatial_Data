@@ -103,11 +103,11 @@ def clean_data(result):
             final_vegan = decoded.get('items')
             
             
-        elif key == "Park":
-            park = result.get(key)
-            response = park.get('response')
+        elif key == "Beer Bar":
+            bar = result.get(key)
+            response = bar.get('response')
             decoded = response.get('groups')[0]
-            final_park = decoded.get('items')
+            final_bar = decoded.get('items')
             
         elif key == "Basketball Court":
             sports = result.get(key)
@@ -121,7 +121,7 @@ def clean_data(result):
             decoded = response.get('groups')[0]
             final_train = decoded.get('items')
             
-    results = [final_school, final_vegan,  final_park, final_sport, final_train]
+    results = [final_school, final_vegan,  final_bar, final_sport, final_train]
             
     return results
 
