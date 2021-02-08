@@ -1,0 +1,33 @@
+_id,name,lat,long,category,loc,distance
+{'$oid': '602150e528ec95f95d4ebf8d'},La Camelia Vegan-Bar,43.261577,-2.92542,'Vegetarian / Vegan Restaurant',"{'type': 'Point', 'coordinates': [-2.92542, 43.261577]}",0.12524939993875595
+{'$oid': '602150e528ec95f95d4ebf9b'},NBA Fan Zone,43.26136308404195,-2.923942690858156,'Basketball Court',"{'type': 'Point', 'coordinates': [-2.923942690858156, 43.26136308404195]}",0.18487595965025358
+{'$oid': '602150e528ec95f95d4ebf9c'},Mundobasket Fan Zone,43.26041228801192,-2.924410901561595,'Basketball Court',"{'type': 'Point', 'coordinates': [-2.924410901561595, 43.26041228801192]}",0.2643738439039582
+{'$oid': '602150e528ec95f95d4ebf93'},Ledesma N°5,43.2621493293564,-2.928702135743765,'Beer Bar',"{'type': 'Point', 'coordinates': [-2.928702135743765, 43.2621493293564]}",0.28220958394428974
+{'$oid': '602150e528ec95f95d4ebfa2'},Estacion FEVE La Concordia,43.26004642968753,-2.9256980146858798,'Train Station',"{'type': 'Point', 'coordinates': [-2.9256980146858798, 43.26004642968753]}",0.296818551547315
+{'$oid': '602150e528ec95f95d4ebfa1'},Estación de Abando Indalecio Prieto,43.26048731215511,-2.927953004837036,'Train Station',"{'type': 'Point', 'coordinates': [-2.927953004837036, 43.26048731215511]}",0.32662979912860196
+{'$oid': '602150e528ec95f95d4ebfa4'},Estación de San Nicolás,43.26017657781402,-2.922186217749781,'Train Station',"{'type': 'Point', 'coordinates': [-2.922186217749781, 43.26017657781402]}",0.37723605751977607
+{'$oid': '602150e528ec95f95d4ebfa5'},EuskoTren Casco Viejo,43.26030638360346,-2.921988286234908,'Train Station',"{'type': 'Point', 'coordinates': [-2.921988286234908, 43.26030638360346]}",0.37782882524090733
+{'$oid': '602150e528ec95f95d4ebfa6'},Euskotren San Nikolas,43.2600496906265,-2.922338128646173,'Train Station',"{'type': 'Point', 'coordinates': [-2.922338128646173, 43.2600496906265]}",0.37996336428935384
+{'$oid': '602150e528ec95f95d4ebf98'},Oddity,43.2584,-2.925058,'Lounge',"{'type': 'Point', 'coordinates': [-2.925058, 43.2584]}",0.4785395960298869
+{'$oid': '602150e528ec95f95d4ebfa3'},Plaza del Funicular / Funikularreko plaza,43.26842444358343,-2.926441719147161,'Train Station',"{'type': 'Point', 'coordinates': [-2.926441719147161, 43.26842444358343]}",0.6432071595851101
+{'$oid': '602150e528ec95f95d4ebf91'},Morrocotuda Bar,43.26584229198061,-2.932258321861056,'Beer Bar',"{'type': 'Point', 'coordinates': [-2.932258321861056, 43.26584229198061]}",0.662977445928532
+{'$oid': '602150e528ec95f95d4ebf90'},Restaurante Luum,43.264866,-2.933099,'Vegetarian / Vegan Restaurant',"{'type': 'Point', 'coordinates': [-2.933099, 43.264866]}",0.6758764997806129
+{'$oid': '602150e528ec95f95d4ebf96'},Residence,43.26616040609214,-2.932257982783606,'Pub',"{'type': 'Point', 'coordinates': [-2.932257982783606, 43.26616040609214]}",0.682258483670121
+{'$oid': '602150e528ec95f95d4ebf8e'},Bohemian Lane,43.25643000858261,-2.9247841211133747,'Vegetarian / Vegan Restaurant',"{'type': 'Point', 'coordinates': [-2.9247841211133747, 43.25643000858261]}",0.6984416763510329
+{'$oid': '602150e528ec95f95d4ebf95'},Cervecera Arambarri,43.25560975775748,-2.924627667451442,'Beer Bar',"{'type': 'Point', 'coordinates': [-2.924627667451442, 43.25560975775748]}",0.7902766392047148
+{'$oid': '602150e528ec95f95d4ebf8f'},Garibolo,43.258352692,-2.933279752,'Vegetarian / Vegan Restaurant',"{'type': 'Point', 'coordinates': [-2.933279752, 43.258352692]}",0.8069818699907113
+{'$oid': '602150e528ec95f95d4ebf92'},Bihotz Café,43.25546242866321,-2.9262361897577085,'Beer Bar',"{'type': 'Point', 'coordinates': [-2.9262361897577085, 43.25546242866321]}",0.8083441278007334
+{'$oid': '602150e528ec95f95d4ebf9d'},Cancha de basket de Solokoetxe,43.25533695408868,-2.9203581050539578,'Basketball Court',"{'type': 'Point', 'coordinates': [-2.9203581050539578, 43.25533695408868]}",0.9113049698101429
+{'$oid': '602150e528ec95f95d4ebfa8'},Renfe Zabalburu,43.25623016471469,-2.9326762309781222,'Train Station',"{'type': 'Point', 'coordinates': [-2.9326762309781222, 43.25623016471469]}",0.9350625752476105
+{'$oid': '602150e528ec95f95d4ebfa7'},Estación de Atxuri,43.254213456149714,-2.9215022923516023,'Train Station',"{'type': 'Point', 'coordinates': [-2.9215022923516023, 43.254213456149714]}",0.9925094476190165
+{'$oid': '602150e528ec95f95d4ebfaa'},EuskoTren,43.25409575698544,-2.921419143676758,'Train',"{'type': 'Point', 'coordinates': [-2.921419143676758, 43.25409575698544]}",1.007042086381049
+{'$oid': '602150e528ec95f95d4ebf99'},"Zona de Pintxos, García Rivero/Licenciado Poza",43.26209172329073,-2.9390600835116567,'Tapas Restaurant',"{'type': 'Point', 'coordinates': [-2.9390600835116567, 43.26209172329073]}",1.1162692707668391
+{'$oid': '602150e528ec95f95d4ebf94'},Penguin Bar,43.26242456587024,-2.939872210853624,'Beer Bar',"{'type': 'Point', 'coordinates': [-2.939872210853624, 43.26242456587024]}",1.1803741580856495
+{'$oid': '602150e528ec95f95d4ebf9e'},Sudenpesä,43.26073605371366,-2.9401669206705625,'Basketball Court',"{'type': 'Point', 'coordinates': [-2.9401669206705625, 43.26073605371366]}",1.2235043441118827
+{'$oid': '602150e528ec95f95d4ebf97'},la Santa Caña,43.26216946227061,-2.9410455398818547,'Beer Bar',"{'type': 'Point', 'coordinates': [-2.9410455398818547, 43.26216946227061]}",1.276353161621447
+{'$oid': '602150e528ec95f95d4ebfa9'},Estación de Miribilla,43.2503800641892,-2.930434048175812,'Train Station',"{'type': 'Point', 'coordinates': [-2.930434048175812, 43.2503800641892]}",1.4316173551032025
+{'$oid': '602150e528ec95f95d4ebf9a'},Kirruli,43.26307706900917,-2.943422215866908,'Bar',"{'type': 'Point', 'coordinates': [-2.943422215866908, 43.26307706900917]}",1.4680274700469582
+{'$oid': '602150e528ec95f95d4ebfac'},Renfe Autonomía,43.25895509628111,-2.945733990378071,'Train Station',"{'type': 'Point', 'coordinates': [-2.945733990378071, 43.25895509628111]}",1.7062710953612177
+{'$oid': '602150e528ec95f95d4ebfab'},Estación de Ametzola,43.254662,-2.943658,'Train Station',"{'type': 'Point', 'coordinates': [-2.943658, 43.254662]}",1.7346185070461158
+{'$oid': '602150e528ec95f95d4ebf9f'},Fronton Alonsotegi,43.24538,-2.990099,'Basketball Court',"{'type': 'Point', 'coordinates': [-2.990099, 43.24538]}",5.590031826128275
+{'$oid': '602150e528ec95f95d4ebfa0'},IMD Barakaldo,43.277887037069846,-2.9944991692415885,'Basketball Court',"{'type': 'Point', 'coordinates': [-2.9944991692415885, 43.277887037069846]}",5.851623609281836
