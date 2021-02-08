@@ -20,8 +20,15 @@ Based on all the information given by the employees, the first filters I applied
  3. With less than 50 employees, to be surrounded by small companies like us
  4. Created since 2007 to be surrounded by young companies. 
 
-# Working plan
-![workingplan](https://github.com/AnaAGG/P3_Geospatial_Data/blob/main/Images/Presentaci%C3%B3n1.jpg?raw=true)
+# Working plan 
+
+Before first filtering using MongoDB I obtained a set of XXX companies with coordinates located in **Toledo, Madrid, Barcelona, Bilbao, Gijón**. 
+
+The coordinates were used to realice the API Foursquare calls using Bars, Parks, Court Basketball, vegan restaurants and train stations. 
+
+Once all the information was downloaded in json format, I made a calculation of the distances between the coordinates of origin and the information obtained from Foursquare. 
+
+Finally, I made a weighting of each of the distances to obtain a ranking of the best places. 
 
 The following resources have been used to achieve the objective of this project: 
 
